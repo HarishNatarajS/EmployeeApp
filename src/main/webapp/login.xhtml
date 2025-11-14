@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+>
+  <h:body style="text-align: center">
+    <div
+      style="
+        margin: auto;
+        width: 300px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      "
+    >
+      <h2>Login</h2>
+
+      <h:form>
+        <h:inputText
+          value="#{loginBean.username}"
+          required="true"
+          requiredMessage="Username required"
+          style="width: 90%; margin: 8px"
+        />
+
+        <h:inputSecret
+          value="#{loginBean.password}"
+          required="true"
+          requiredMessage="Password required"
+          style="width: 90%; margin: 8px"
+        />
+
+        <h:commandButton
+          value="Login"
+          action="#{loginBean.login}"
+          style="padding: 8px 18px; background: #0078ff; color: white"
+        />
+      </h:form>
+    </div>
+  </h:body>
+</html>
